@@ -118,6 +118,16 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
     }
   };
 
+  const handleLogout = () => {
+    if (window.confirm('Are you sure you want to log out?')) {
+      onLogout();
+    }
+  };
+
+  useEffect(() => {
+    loadStudentData();
+  }, []);
+
   const handleDeleteAccount = async () => {
     if (!window.confirm('⚠️ WARNING: This will permanently delete your account and all your progress. This action CANNOT be undone. Are you sure?')) {
       return;
