@@ -2454,33 +2454,19 @@ body.dark-mode .lesson-body td {
 }
 
 /* --- Danger Zone Specifics --- */
-.danger-pulse {
-animation: dangerPulse 1.2s infinite;
+.danger-zone {
+    border: 1px solid #ff3b30 !important;
+    background: rgba(255, 59, 48, 0.05) !important;
+    position: relative;
+    overflow: hidden;
 }
 
-
-@keyframes dangerPulse {
-0% { background: rgba(0,0,0,0.7); }
-50% { background: rgba(120,0,0,0.85); }
-100% { background: rgba(0,0,0,0.7); }
-}
-
-
-.danger-glow {
-color: #ff3b30;
-text-shadow: 0 0 15px rgba(255,59,48,0.9);
-}
-
-
-.shake {
-animation: shake 0.3s infinite;
-}
-
-
-@keyframes shake {
-0% { transform: translateX(0); }
-25% { transform: translateX(-2px); }
-50% { transform: translateX(2px); }
-75% { transform: translateX(-2px); }
-100% { transform: translateX(0); }
+.danger-zone::after {
+    content: '⚠️';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 60px;
+    opacity: 0.1;
+    transform: rotate(15deg);
 }
