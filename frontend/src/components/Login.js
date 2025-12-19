@@ -13,13 +13,23 @@ const Login = ({ onLogin }) => {
   const [error, setError] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
 
+  const [forgotPasswordMode, setForgotPasswordMode] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setSuccessMsg('');
 
     try {
-      if (isRegistering) {
+      if (forgotPasswordMode) {
+        const response = await axios.post(`${API_BASE}/api/reset-password`, {
+          username,
+          new_password: password
+        });
+        setSuccessMsg(response.data.message);
+        setForgotPasswordMode(false);
+        setPassword('');
+      } else if (isRegistering) {
         if (accountType === 'admin' && !adminCode.trim()) {
           setError('Please enter the admin access code.');
           return;
@@ -46,7 +56,7 @@ const Login = ({ onLogin }) => {
         }
       }
     } catch (err) {
-      console.error('Login/Register error:', err);
+      console.error('Login/Register/Reset error:', err);
       const apiError = err.response?.data?.error;
       const networkError = !err.response ? 'Network error: Backend might be offline or blocked by CORS.' : '';
       setError(apiError || networkError || 'An error occurred. Please try again.');
@@ -76,8 +86,12 @@ const Login = ({ onLogin }) => {
 
       <div className="login-right-panel">
         <div className="login-form-box">
-          <h2>{isRegistering ? 'Create Account' : 'Sign In'}</h2>
-          <p>{isRegistering ? 'Join us to start learning!' : 'Enter your credentials to access your learning dashboard'}</p>
+          <h2>{forgotPasswordMode ? 'Reset Password' : (isRegistering ? 'Create Account' : 'Sign In')}</h2>
+          <p>
+            {forgotPasswordMode
+              ? 'Enter your username and your new password'
+              : (isRegistering ? 'Join us to start learning!' : 'Enter your credentials to access your learning dashboard')}
+          </p>
 
           {error && <div className="alert alert-danger" style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
           {successMsg && <div className="alert alert-success" style={{ color: 'green', marginBottom: '10px' }}>{successMsg}</div>}
@@ -95,7 +109,7 @@ const Login = ({ onLogin }) => {
               />
             </div>
 
-            {isRegistering && (
+            {isRegistering && !forgotPasswordMode && (
               <div className="input-group">
                 <label>Account Type</label>
                 <div className="account-type-options">
@@ -127,14 +141,14 @@ const Login = ({ onLogin }) => {
             )}
 
             <div className="input-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">{forgotPasswordMode ? 'New Password' : 'Password'}</label>
               <div style={{ position: 'relative' }}>
                 <input
                   type={showPassword ? "text" : "password"}
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter your password"
+                  placeholder={forgotPasswordMode ? "Enter new password" : "Enter your password"}
                   required
                   style={{ width: '100%', paddingRight: '40px' }}
                 />
@@ -158,7 +172,7 @@ const Login = ({ onLogin }) => {
               </div>
             </div>
 
-            {isRegistering && accountType === 'admin' && (
+            {isRegistering && accountType === 'admin' && !forgotPasswordMode && (
               <div className="input-group">
                 <label htmlFor="adminCode">Admin Access Code</label>
                 <input
@@ -173,16 +187,17 @@ const Login = ({ onLogin }) => {
             )}
 
             <button type="submit" className="btn btn-primary">
-              {isRegistering ? 'Register' : 'Sign In'}
+              {forgotPasswordMode ? 'Update Password' : (isRegistering ? 'Register' : 'Sign In')}
             </button>
 
-            <div style={{ marginTop: '15px', textAlign: 'center' }}>
+            <div style={{ marginTop: '15px', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <button
                 type="button"
                 className="btn-link"
-                style={{ background: 'none', border: 'none', color: '#007bff', cursor: 'pointer', textDecoration: 'underline' }}
+                style={{ background: 'none', border: 'none', color: '#007bff', cursor: 'pointer', textDecoration: 'underline', padding: '0' }}
                 onClick={() => {
                   setIsRegistering(!isRegistering);
+                  setForgotPasswordMode(false);
                   setError('');
                   setSuccessMsg('');
                   setAdminCode('');
@@ -191,6 +206,21 @@ const Login = ({ onLogin }) => {
               >
                 {isRegistering ? 'Already have an account? Sign In' : 'Need an account? Register'}
               </button>
+
+              {!isRegistering && (
+                <button
+                  type="button"
+                  className="btn-link"
+                  style={{ background: 'none', border: 'none', color: forgotPasswordMode ? '#666' : '#007bff', cursor: 'pointer', textDecoration: 'underline', padding: '0' }}
+                  onClick={() => {
+                    setForgotPasswordMode(!forgotPasswordMode);
+                    setError('');
+                    setSuccessMsg('');
+                  }}
+                >
+                  {forgotPasswordMode ? '← Back to Sign In' : 'Forgot Password?'}
+                </button>
+              )}
             </div>
           </form>
         </div>
