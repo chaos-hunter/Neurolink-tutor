@@ -124,6 +124,15 @@ def db_save_student(username, data):
         item.data = data
     db.session.commit()
 
+def db_delete_student(username):
+    """Delete a single student profile from the database."""
+    item = Student.query.get(username)
+    if item:
+        db.session.delete(item)
+        db.session.commit()
+        return True
+    return False
+
 # Old JSON helpers (can be redirected to DB)
 def read_json_file(file_path):
     if 'student.json' in file_path:
@@ -983,15 +992,21 @@ def delete_user_account():
     if not username:
         return jsonify({"error": "Username is required"}), 400
 
-    student_data = read_json_file(STUDENT_FILE)
+    # First attempt to delete from the database
+    db_success = db_delete_student(username)
 
-    if username not in student_data:
+    # Also check if it exists in the local JSON structure for compatibility
+    student_data = read_json_file(STUDENT_FILE)
+    json_exists = username in student_data
+
+    if json_exists:
+        del student_data[username]
+        write_json_file(STUDENT_FILE, student_data)
+
+    if not db_success and not json_exists:
         return jsonify({"error": "User not found"}), 404
 
-    del student_data[username]
-    write_json_file(STUDENT_FILE, student_data)
-
-    return jsonify({"success": True, "message": f"User '{username}' deleted"})
+    return jsonify({"success": True, "message": f"User '{username}' deleted successfully"})
 
 
 @app.route('/api/admin/create-badge', methods=['POST'])
