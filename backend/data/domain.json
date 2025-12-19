@@ -1,0 +1,569 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "skill": "vocabulary",
+            "level": 1,
+            "question": "Select the word that best completes the sentence: 'The student was _____ about learning new vocabulary words.'",
+            "answer": "excited",
+            "hints": [
+                "Consider words that describe positive feelings toward learning",
+                "This word describes someone who is eager and enthusiastic",
+                "The word starts with 'e' and means showing enthusiasm"
+            ],
+            "type": "sentence_completion",
+            "difficulty": "beginner",
+            "lesson": "vocabulary_lesson_1"
+        },
+        {
+            "id": 2,
+            "skill": "vocabulary",
+            "level": 1,
+            "question": "What is the meaning of the word 'observe' in this sentence: 'Scientists observe animals in their natural habitat'?",
+            "answer": "watch",
+            "hints": [
+                "Think about what scientists do when they study animals",
+                "This action involves using your eyes carefully",
+                "It means to look at something closely and carefully"
+            ],
+            "type": "word_meaning",
+            "difficulty": "beginner",
+            "lesson": "vocabulary_lesson_1"
+        },
+        {
+            "id": 3,
+            "skill": "vocabulary",
+            "level": 1,
+            "question": "Choose the synonym for 'enormous': The enormous elephant walked slowly through the forest.",
+            "answer": "huge",
+            "hints": [
+                "Look for a word that means the same as 'enormous'",
+                "This word describes something very large in size",
+                "It's a common word that starts with 'h'"
+            ],
+            "type": "synonym_identification",
+            "difficulty": "beginner",
+            "lesson": "vocabulary_lesson_1"
+        },
+        {
+            "id": 4,
+            "skill": "vocabulary",
+            "level": 1,
+            "question": "What is the opposite of 'ancient'?",
+            "answer": "modern",
+            "hints": [
+                "Think about time periods - ancient refers to very old times",
+                "The opposite would describe current or recent times",
+                "This word describes things from the present day"
+            ],
+            "type": "antonym_identification",
+            "difficulty": "beginner",
+            "lesson": "vocabulary_lesson_1"
+        },
+        {
+            "id": 5,
+            "skill": "vocabulary",
+            "level": 1,
+            "question": "Complete the analogy: Hot is to cold as light is to _____.",
+            "answer": "dark",
+            "hints": [
+                "Think about opposites - hot and cold are opposites",
+                "What is the opposite of light?",
+                "This word describes the absence of light"
+            ],
+            "type": "analogy",
+            "difficulty": "beginner",
+            "lesson": "vocabulary_lesson_1"
+        },
+        {
+            "id": 6,
+            "skill": "grammar",
+            "level": 1,
+            "question": "Identify the verb in this sentence: 'The teacher explains the lesson clearly.'",
+            "answer": "explains",
+            "hints": [
+                "A verb is an action word - what is the teacher doing?",
+                "Look for the word that shows what action is being performed",
+                "This word tells us what the teacher is doing with the lesson"
+            ],
+            "type": "part_of_speech",
+            "difficulty": "beginner",
+            "lesson": "grammar_lesson_1"
+        },
+        {
+            "id": 7,
+            "skill": "grammar",
+            "level": 1,
+            "question": "Choose the correct pronoun: '_____ are studying English grammar.' (We/Us/Our)",
+            "answer": "We",
+            "hints": [
+                "This pronoun is used as the subject of the sentence",
+                "It refers to a group that includes the speaker",
+                "Use this form when the pronoun is doing the action"
+            ],
+            "type": "pronoun_usage",
+            "difficulty": "beginner",
+            "lesson": "grammar_lesson_1"
+        },
+        {
+            "id": 8,
+            "skill": "grammar",
+            "level": 1,
+            "question": "What is the plural form of 'child'?",
+            "answer": "children",
+            "hints": [
+                "Some English words have irregular plural forms",
+                "This word doesn't just add 's' to become plural",
+                "The plural form is completely different from the singular"
+            ],
+            "type": "plural_forms",
+            "difficulty": "beginner",
+            "lesson": "grammar_lesson_1"
+        },
+        {
+            "id": 9,
+            "skill": "grammar",
+            "level": 1,
+            "question": "Select the correct verb form: 'She _____ to school every day.' (go/goes/going)",
+            "answer": "goes",
+            "hints": [
+                "The subject 'She' is singular and third person",
+                "For third person singular, we usually add 's' to the verb",
+                "This is a habitual action happening regularly"
+            ],
+            "type": "verb_conjugation",
+            "difficulty": "beginner",
+            "lesson": "grammar_lesson_1"
+        },
+        {
+            "id": 10,
+            "skill": "grammar",
+            "level": 1,
+            "question": "Identify the adjective in this sentence: 'The intelligent student answered the difficult question.'",
+            "answer": "intelligent",
+            "hints": [
+                "An adjective describes or modifies a noun",
+                "Look for words that tell us more about the student or question",
+                "This word describes what kind of student we're talking about"
+            ],
+            "type": "part_of_speech",
+            "difficulty": "beginner",
+            "lesson": "grammar_lesson_1"
+        },
+        {
+            "id": 11,
+            "skill": "reading_comprehension",
+            "level": 1,
+            "question": "Read: 'Maria loves reading books. She visits the library every weekend to find new stories.' What does Maria do every weekend?",
+            "answer": "visits the library",
+            "hints": [
+                "Look for information about Maria's weekend activities",
+                "The text mentions what she does regularly on weekends",
+                "Focus on the action she performs every weekend"
+            ],
+            "type": "literal_comprehension",
+            "difficulty": "beginner",
+            "lesson": "reading_comprehension_lesson_1"
+        },
+        {
+            "id": 12,
+            "skill": "reading_comprehension",
+            "level": 1,
+            "question": "Based on the text: 'The dark clouds gathered in the sky, and the wind began to blow stronger.' What is likely to happen next?",
+            "answer": "rain",
+            "hints": [
+                "Consider what dark clouds and strong wind usually indicate",
+                "Think about weather patterns and what these signs suggest",
+                "These are common signs that precede a particular weather event"
+            ],
+            "type": "inference",
+            "difficulty": "beginner",
+            "lesson": "reading_comprehension_lesson_1"
+        },
+        {
+            "id": 13,
+            "skill": "reading_comprehension",
+            "level": 1,
+            "question": "What is the main idea of this passage: 'Exercise is important for good health. It helps strengthen muscles, improves heart function, and boosts energy levels.'?",
+            "answer": "exercise benefits health",
+            "hints": [
+                "Look for the central message that connects all the details",
+                "The passage discusses various positive effects of one activity",
+                "Focus on the overall theme rather than specific details"
+            ],
+            "type": "main_idea",
+            "difficulty": "beginner",
+            "lesson": "reading_comprehension_lesson_1"
+        },
+        {
+            "id": 14,
+            "skill": "spelling",
+            "level": 1,
+            "question": "Spell the word that means 'to get knowledge or skill by studying or practicing':",
+            "answer": "learn",
+            "hints": [
+                "This is a fundamental word in education",
+                "It's what students do when they acquire new information",
+                "The word has 5 letters and starts with 'l'"
+            ],
+            "type": "definition_spelling",
+            "difficulty": "beginner",
+            "lesson": "spelling_lesson_1"
+        },
+        {
+            "id": 15,
+            "skill": "spelling",
+            "level": 1,
+            "question": "Correct the spelling: 'The studant was prepareing for the test.'",
+            "answer": "student preparing",
+            "hints": [
+                "Look for two spelling errors in this sentence",
+                "The first error is in the word for a person who studies",
+                "The second error is in the word that means getting ready"
+            ],
+            "type": "error_correction",
+            "difficulty": "beginner",
+            "lesson": "spelling_lesson_1"
+        },
+        {
+            "id": 16,
+            "skill": "spelling",
+            "level": 1,
+            "question": "Spell the word that means 'having the ability to read and write':",
+            "answer": "literate",
+            "hints": [
+                "This word describes someone who has basic reading and writing skills",
+                "It's the opposite of 'illiterate'",
+                "The word starts with 'lit' and has 8 letters"
+            ],
+            "type": "definition_spelling",
+            "difficulty": "beginner",
+            "lesson": "spelling_lesson_1"
+        },
+        {
+            "id": 17,
+            "skill": "writing",
+            "level": 1,
+            "question": "Combine these sentences using a conjunction: 'I studied hard. I passed the test.'",
+            "answer": "I studied hard, so I passed the test",
+            "hints": [
+                "Look for a word that shows cause and effect relationship",
+                "The first sentence explains why the second sentence happened",
+                "Use a conjunction that indicates result or consequence"
+            ],
+            "type": "sentence_combining",
+            "difficulty": "beginner",
+            "lesson": "writing_lesson_1"
+        },
+        {
+            "id": 18,
+            "skill": "writing",
+            "level": 1,
+            "question": "Write a topic sentence for a paragraph about the importance of education:",
+            "answer": "Education is essential for personal and professional success",
+            "hints": [
+                "A topic sentence introduces the main idea of a paragraph",
+                "Focus on why education matters in people's lives",
+                "Make a clear statement about education's value or importance"
+            ],
+            "type": "topic_sentence",
+            "difficulty": "beginner",
+            "lesson": "writing_lesson_1"
+        },
+        {
+            "question": "Which word means 'to feel good and pleased'?",
+            "answer": "Happy",
+            "hints": [
+                "Think about how you feel when you get a present you really like.",
+                "It's a feeling that makes you smile.",
+                "The opposite of sad."
+            ],
+            "type": "multiple_choice",
+            "difficulty": "beginner",
+            "id": 19,
+            "skill": "vocabulary",
+            "level": 1,
+            "ai_generated": true
+        },
+        {
+            "question": "Complete the sentence with the best word: The little bird built a cozy ______ in the tree.",
+            "answer": "nest",
+            "hints": [
+                "Where do birds lay their eggs?",
+                "It's where baby birds live.",
+                "It's made of twigs and leaves."
+            ],
+            "type": "fill_in_the_blank",
+            "difficulty": "beginner",
+            "id": 20,
+            "skill": "vocabulary",
+            "level": 1,
+            "ai_generated": true
+        },
+        {
+            "question": "In one or two words, what does it mean if someone is 'kind'?",
+            "answer": "Nice",
+            "hints": [
+                "Think about how a good friend acts.",
+                "It's about being good to other people.",
+                "It's the opposite of mean."
+            ],
+            "type": "short_answer",
+            "difficulty": "beginner",
+            "id": 21,
+            "skill": "vocabulary",
+            "level": 1,
+            "ai_generated": true
+        },
+        {
+            "question": "Identify the grammatical error in the following sentence: \"The committee's responsibilities include overseeing project timelines, allocating resources effectively, and to ensure compliance with regulatory standards.\"",
+            "answer": "The error is \"to ensure compliance.\" It should be \"ensuring compliance\" to maintain parallel structure with \"overseeing\" and \"allocating.\"",
+            "hints": [
+                "Look for lists of actions or items.",
+                "Ensure all elements in a list follow the same grammatical pattern.",
+                "Consider the form of the verbs used to describe the responsibilities."
+            ],
+            "type": "Error Identification",
+            "difficulty": "Advanced Beginner",
+            "id": 22,
+            "skill": "grammar",
+            "level": 1,
+            "ai_generated": true,
+            "personalized": true
+        },
+        {
+            "question": "Choose the sentence that is grammatically correct and uses punctuation effectively:",
+            "options": [
+                "a) The economic forecast was grim, consequently, many investors decided to pull their funds.",
+                "b) The economic forecast was grim; consequently, many investors decided to pull their funds.",
+                "c) The economic forecast was grim consequently many investors decided to pull their funds.",
+                "d) The economic forecast was grim; many investors decided to pull their funds consequently."
+            ],
+            "answer": "b) The economic forecast was grim; consequently, many investors decided to pull their funds.",
+            "hints": [
+                "Consider how to join two independent clauses when using a conjunctive adverb like \"consequently.\"",
+                "A comma splice (two independent clauses joined only by a comma) is usually incorrect.",
+                "Semicolons are often used to connect closely related independent clauses."
+            ],
+            "type": "Multiple Choice (Sentence Correction)",
+            "difficulty": "Advanced Intermediate",
+            "id": 23,
+            "skill": "grammar",
+            "level": 1,
+            "ai_generated": true,
+            "personalized": true
+        },
+        {
+            "question": "Rewrite the following sentence using an inversion for formality, starting with \"Had\": \"If the research team had anticipated the technical difficulties, they would have allocated more time for the development phase.\"",
+            "answer": "Had the research team anticipated the technical difficulties, they would have allocated more time for the development phase.",
+            "hints": [
+                "Inversion in conditional sentences (especially Type 3) can make the sentence more formal.",
+                "When using \"Had\" to invert a Type 3 conditional, remove \"if\" and place \"Had\" at the beginning, followed by the subject.",
+                "Ensure the main clause remains unchanged."
+            ],
+            "type": "Sentence Transformation",
+            "difficulty": "Advanced Intermediate",
+            "id": 24,
+            "skill": "grammar",
+            "level": 1,
+            "ai_generated": true,
+            "personalized": true
+        },
+        {
+            "question": "Complete the sentence with the correct form of the verb \"be\": \"It is imperative that the new policy _____ implemented without delay.\"",
+            "answer": "be",
+            "hints": [
+                "Consider the grammatical mood used for expressions of necessity, urgency, or recommendation.",
+                "The word \"imperative\" often signals the use of a specific verb mood for the following clause.",
+                "In the subjunctive mood for most verbs (including \"be\"), the base form of the verb is used regardless of the subject."
+            ],
+            "type": "Sentence Completion",
+            "difficulty": "Advanced",
+            "id": 25,
+            "skill": "grammar",
+            "level": 1,
+            "ai_generated": true,
+            "personalized": true
+        },
+        {
+            "question": "Identify and correct the dangling modifier in the following sentence: \"Having finished the grueling marathon, a warm bath was exactly what I needed.\"",
+            "answer": "The dangling modifier is \"Having finished the grueling marathon.\" The sentence implies the bath finished the marathon. A correct version: \"Having finished the grueling marathon, I found a warm bath was exactly what I needed.\" (Other acceptable corrections include: \"After finishing the grueling marathon, I needed a warm bath.\" or \"A warm bath was exactly what I needed after I had finished the grueling marathon.\")",
+            "hints": [
+                "A participial phrase at the beginning of a sentence should logically modify the subject of the main clause.",
+                "Ask yourself \"who\" or \"what\" is performing the action described by the opening phrase.",
+                "If the subject of the main clause isn't performing that action, restructure the sentence."
+            ],
+            "type": "Error Correction",
+            "difficulty": "Advanced",
+            "id": 26,
+            "skill": "grammar",
+            "level": 1,
+            "ai_generated": true,
+            "personalized": true
+        },
+        {
+            "question": "Combine the following two sentences into one complex sentence using an appropriate subordinating conjunction to express a cause-and-effect relationship, aiming for conciseness: \"The data analysis revealed significant inconsistencies. The project's timeline needed to be revised.\"",
+            "answer": "Because the data analysis revealed significant inconsistencies, the project's timeline needed to be revised.",
+            "hints": [
+                "Identify the cause and the effect in the two sentences.",
+                "Choose a subordinating conjunction that clearly indicates a causal relationship (e.g., because, since, as).",
+                "Ensure the combined sentence flows logically and correctly uses punctuation (e.g., a comma after an introductory dependent clause)."
+            ],
+            "type": "Sentence Combination/Rewrite",
+            "difficulty": "Advanced Expert",
+            "id": 27,
+            "skill": "grammar",
+            "level": 1,
+            "ai_generated": true,
+            "personalized": true
+        },
+        {
+            "question": "Rewrite the following two sentences into a single, more sophisticated sentence by using an absolute phrase: \"The sun was setting. The entire sky was painted in hues of orange and purple.\"",
+            "answer": "The sun setting, the entire sky was painted in hues of orange and purple.",
+            "hints": [
+                "An absolute phrase consists of a noun or pronoun and a participle (and sometimes modifiers), and it modifies the entire main clause.",
+                "It provides additional information or context to the main clause and is not grammatically dependent on any single word in the main clause.",
+                "Look for a noun and its related verb (often a form of 'to be' or a present participle) that can be separated from the main clause by a comma."
+            ],
+            "type": "Sentence Transformation (Advanced)",
+            "difficulty": "Advanced Expert",
+            "id": 28,
+            "skill": "grammar",
+            "level": 1,
+            "ai_generated": true,
+            "personalized": true
+        }
+    ],
+    "skills": [
+        "vocabulary",
+        "grammar",
+        "reading_comprehension",
+        "spelling",
+        "writing"
+    ],
+    "lessons": {
+        "vocabulary": [
+            {
+                "id": "vocabulary_lesson_1",
+                "title": "Vocabulary - Lesson 1",
+                "description": "Core practice for this skill.",
+                "content": "Lesson text."
+            },
+            {
+                "id": "vocabulary_ai_lesson_2",
+                "title": "Word Power: Unlock the Magic of Words! (Beginner Vocabulary)",
+                "description": "Welcome, young word explorers! In this lesson, you'll discover what vocabulary is, why it's super important, and fun, easy ways to start collecting your very own awesome words. Get ready to boost your 'word power'!",
+                "content": "# Word Power: Unlock the Magic of Words! (Beginner Vocabulary)\n\n## Hello, Future Word Master!\n\nHave you ever heard a word and wondered, \"What does that mean?\" Or wished you knew just the right word to say exactly what you feel? That's what vocabulary is all about! Let's dive in and learn how to become a word wizard!\n\n---\n\n## What is Vocabulary?\n\nImagine your brain is like a giant, super cool collection box. Every single word you know and understand goes into that box! That collection of words is your **vocabulary**.\n\n*   When you say \"hello\" or \"thank you,\"\n*   When you read a story about a \"brave\" knight,\n*   When you point to a \"red\" apple,\n\n...you are using words from your vocabulary box!\n\n### Why is a Big Vocabulary Box Awesome?\n\n1.  **You can talk better!** The more words you know, the easier it is to share your ideas, feelings, and stories with others.\n2.  **You can understand better!** Reading books and listening to people becomes much easier when you know what the words mean.\n3.  **You can learn more!** Words are like keys that unlock new information and adventures!\n\n---\n\n## How to Start Collecting New Words (Super Easy Ways!)\n\nLearning new words doesn't have to be hard work; it can be like a fun game!\n\n### 1. Look at Pictures!\n\nOur world is full of amazing things, and many words describe them! When you see a new object, try to learn its name.\n\n*   **Example:** You see a fluffy animal that says \"meow.\" Someone tells you, \"That's a **cat**!\" Now you know the word \"cat\"!\n\n    ![Cute Cat](https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/800px-Cat_August_2010-4.jpg)\n\n### 2. Listen Carefully to Sentences (Context is Key!)\n\nSometimes, you can guess what a new word means by how it's used in a sentence, or by the words around it. This is called **context**.\n\n*   **Example:** \"The boy was very **happy** when he got a new toy. He smiled and jumped for joy!\"\n    *   *Think:* If he's smiling and jumping for joy, what does \"happy\" probably mean? It means feeling good and joyful!\n\n    ![Happy Boy](https://upload.wikimedia.org/wikipedia/commons/e/ed/Happy_boy_by_the_sea.jpg)\n\n### 3. Ask Questions!\n\nDon't be shy! If you hear a word you don't know, just ask! \"What does _______ mean?\" It's the fastest way to learn.\n\n*   **Example:** Your teacher says, \"Please be **polite**.\" You ask, \"What does 'polite' mean?\" Your teacher explains, \"It means being kind and having good manners.\"\n\n### 4. Use Word Flashcards (Like Mini-Games!)\n\nFlashcards are cards with a word on one side and its meaning or a picture on the other. You can make your own!\n\n*   **How to make one:**\n    *   On one side, draw a picture of a big elephant.\n    *   On the other side, write the word: **BIG** (and maybe a simple meaning like: \"very large\").\n\n    ![Flashcard Example](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Flashcards_English_French.jpg/640px-Flashcards_English_French.jpg)\n\n---\n\n## Let's Try Some New Words!\n\nHere are a few common words. Let's see if you can understand them using our new tricks!\n\n1.  **Run**\n    *   *Meaning:* To move very fast using your legs.\n    *   *Context:* \"The dog likes to **run** in the park and chase the ball.\"\n    *   *Imagine:* A speedy dog!\n\n2.  **Small**\n    *   *Meaning:* Not big; tiny.\n    *   *Context:* \"The baby bird was so **small**; it fit in my hand!\"\n    *   *Imagine:* A tiny ant or a little mouse!\n\n3.  **Sleep**\n    *   *Meaning:* To rest your body and mind, usually at night, by closing your eyes.\n    *   *Context:* \"After a long day of playing, I was ready to **sleep** soundly in my bed.\"\n    *   *Imagine:* You cozy in bed, eyes closed!\n\n---\n\n## Your Super-Secret Mission: Start Collecting!\n\nNow you know the basics of building your vocabulary! Remember these tips:\n\n*   Look at pictures around you.\n*   Listen to how people use words.\n*   Don't be afraid to ask, \"What does that mean?\"\n*   Try making simple flashcards!\n\nEvery new word you learn adds more power to your communication! Keep practicing, and soon your vocabulary box will be overflowing with awesome words!\n\nHappy word hunting!\n",
+                "learning_objectives": [
+                    "Students will be able to define 'vocabulary' in simple, beginner-friendly terms.",
+                    "Students will identify at least two practical methods for learning new words (e.g., using pictures, listening to context, asking questions).",
+                    "Students will understand the basic meaning of 3-5 common, new words presented in the lesson through examples and context."
+                ],
+                "key_concepts": [
+                    "Vocabulary (as a collection of known words)",
+                    "Word Meaning (understanding what a word represents)",
+                    "Context (using surrounding words/pictures to guess meaning)",
+                    "Flashcards (as a tool for memorization)"
+                ],
+                "ai_generated": true
+            }
+        ],
+        "grammar": [
+            {
+                "id": "grammar_lesson_1",
+                "title": "Grammar - Lesson 1",
+                "description": "Core practice for this skill.",
+                "content": "Lesson text."
+            },
+            {
+                "id": "grammar_ai_lesson_2",
+                "title": "Sentence Superpowers: Your First Steps in Grammar!",
+                "description": "Unlock the secrets of clear communication! This lesson introduces you to the basic building blocks of English grammar, helping you understand how words work together to form powerful and understandable sentences.",
+                "content": "# Sentence Superpowers: Your First Steps in Grammar!\n\nHey Super Communicator! 👋 Have you ever wanted to make sure your messages are always clear, correct, and easy for everyone to understand? That's where **grammar** comes in! Think of grammar as the set of rules that helps us put words together in the right order so they make sense.\n\n## What is Grammar and Why Does It Matter?\n\nImagine trying to build a LEGO castle without any instructions. You'd have a pile of bricks, but it would be hard to make a sturdy, cool-looking castle, right? Grammar is like the instruction manual for our language. It helps us:\n\n*   **Be Understood:** People will know exactly what you mean.\n*   **Communicate Clearly:** No confusion, just smooth conversations!\n*   **Write Effectively:** Whether it's a text, an email, or a story, good grammar makes your writing shine.\n\n## The Building Blocks: Words!\n\nEvery sentence is made of words, and words have different jobs. For our first step, let's meet two of the most important word types:\n\n### 🧱 1. Nouns: Naming Words!\n\nA **noun** is a word that names a **person, place, thing, or idea**. Think of anything you can point to or think about – it probably has a noun for it!\n\n**Examples:**\n\n*   **People:** `teacher`, `student`, `Mom`, `friend`, `dog` (your pet dog has a name, which is a specific noun!)\n*   **Places:** `school`, `park`, `kitchen`, `London`, `planet`\n*   **Things:** `book`, `table`, `computer`, `pizza`, `cloud`, `happiness` (an idea!)\n\n**Can you spot the nouns?**\n\n*   The `cat` slept on the `mat`.\n*   My `teacher` likes `apples`.\n*   The `city` is very `noisy`.\n\n### 🚀 2. Verbs: Action Words!\n\nA **verb** is a word that shows an **action** or a **state of being**. Verbs tell us what a noun is doing or what it is like.\n\n**Examples:**\n\n*   **Action Verbs:** `run`, `jump`, `eat`, `sleep`, `read`, `think`, `talk`\n*   **Being Verbs (they tell us what something IS):** `is`, `am`, `are`, `was`, `were`\n\n**Let's find the verbs!**\n\n*   The `boy` `runs` fast.\n*   I `eat` my breakfast every morning.\n*   She `is` happy.\n*   They `were` playing outside.\n\n## Putting it Together: What is a Sentence?\n\nNow for the superpower! A **sentence** is a complete thought. To be a complete thought, a sentence usually needs at least two things:\n\n1.  **A Noun (or something that acts like one):** This is who or what the sentence is about (the **subject**).\n2.  **A Verb:** This tells us what the noun is doing or being (the **predicate**).\n\n**Look at these simple sentences:**\n\n*   `Birds` `sing`. (Noun: Birds, Verb: sing)\n*   `Fish` `swim`. (Noun: Fish, Verb: swim)\n*   `I` `read`. (Noun: I, Verb: read)\n*   `She` `is` funny. (Noun: She, Verb: is)\n\nSee how a noun and a verb together make a complete idea? Amazing!\n\n## Finishing Touches: Punctuation Power!\n\nEvery sentence needs a strong ending! We use special symbols called **punctuation** marks to show where one thought ends and another begins.\n\n### . The Period (Full Stop)\n\nA **period** `.` tells you that a statement or command has ended. It's the most common ending for a sentence.\n\n*   The dog barked. ✅\n*   I like pizza. ✅\n*   Please sit down. ✅\n\n### ? The Question Mark\n\nA **question mark** `?` tells you that a question has been asked. Your voice usually goes up at the end of a question.\n\n*   Are you happy? ✅\n*   What is your name? ✅\n*   Can I help you? ✅\n\n--- \n\n### 🎉 Congratulations! You've just taken your first powerful steps in understanding grammar. You now know about nouns, verbs, sentences, and basic punctuation. Keep practicing, and your communication superpowers will grow even stronger!",
+                "learning_objectives": [
+                    "Define what grammar is and explain its importance for clear communication.",
+                    "Identify common nouns (people, places, things) in simple sentences.",
+                    "Identify action and 'being' verbs in simple sentences.",
+                    "Understand that a simple sentence typically requires a noun (subject) and a verb (predicate).",
+                    "Correctly use periods and question marks to end simple sentences."
+                ],
+                "key_concepts": [
+                    "Grammar",
+                    "Noun",
+                    "Verb",
+                    "Sentence",
+                    "Period",
+                    "Question Mark"
+                ],
+                "ai_generated": true
+            }
+        ],
+        "reading_comprehension": [
+            {
+                "id": "reading_comprehension_lesson_1",
+                "title": "Reading Comprehension - Lesson 1",
+                "description": "Core practice for this skill.",
+                "content": "Lesson text."
+            },
+            {
+                "id": "reading_comprehension_ai_lesson_2",
+                "title": "Unlock the Text: Mastering Intermediate Reading Comprehension",
+                "description": "This lesson empowers students to move beyond surface-level understanding, teaching them advanced strategies to infer meaning, identify author's purpose, distinguish fact from opinion, and analyze text structure for deeper comprehension.",
+                "content": "## Welcome to Deeper Reading!\n\nReading comprehension is more than just reading words on a page; it's about understanding, interpreting, and connecting with the text. As intermediate readers, we're ready to dive deeper than just 'what happened?' and start exploring 'why?' and 'how?'.\n\n### Why is Intermediate Reading Comprehension Important?\n\nMoving beyond basic recall allows you to:\n*   **Grasp complex ideas:** Understand challenging academic or professional texts.\n*   **Think critically:** Analyze information and form your own opinions.\n*   **Communicate effectively:** Discuss and articulate your understanding of texts.\n*   **Succeed academically and professionally:** Essential for research, reports, and everyday information processing.\n\n---\n\n### Key Strategies for Intermediate Readers\n\n#### 1. Making Inferences: Reading Between the Lines\n\nAn **inference** is an educated guess or conclusion drawn from evidence and reasoning, rather than explicit statements. Think of it as being a detective – you use clues from the text and your own background knowledge to figure out what isn't directly stated.\n\n*   **How to Infer:**\n    1.  **Look for Clues:** Pay attention to word choice, character actions, setting details, and overall tone.\n    2.  **Use Background Knowledge:** Connect what you're reading to what you already know about the world.\n    3.  **Ask 'What does this *suggest*?' or 'Why did the author *include* this?'**\n\n*   **Example:**\n    *   **Text:** \"The old house stood silent, its paint peeling like sunburned skin. Weeds choked the pathway, and the porch swing creaked mournfully in the wind, empty for what seemed like decades.\" \n    *   **Inference:** The house is abandoned and neglected. (Clues: silent, paint peeling, weeds, empty porch swing, creaked mournfully).\n\n#### 2. Identifying Author's Purpose: The 'Why' Behind the Words\n\nAuthors write for a reason. Understanding their **purpose** helps you interpret their message correctly. A common acronym to remember author's purpose is **P.I.E.**:\n\n*   **P - Persuade:** The author wants to convince you to agree with their point of view or take action. (e.g., editorials, advertisements, political speeches).\n    *   *Clues:* Strong opinions, persuasive language, calls to action.\n*   **I - Inform:** The author wants to provide facts, explain something, or teach you about a topic. (e.g., textbooks, news articles, encyclopedias, instruction manuals).\n    *   *Clues:* Factual statements, objective language, definitions, explanations.\n*   **E - Entertain:** The author wants to tell a story or amuse the reader. (e.g., novels, short stories, poems, jokes).\n    *   *Clues:* Storytelling elements, descriptive language, dialogue, humor.\n\n#### 3. Distinguishing Fact vs. Opinion: Knowing What's Real (and What's Not)\n\n*   A **fact** is a statement that can be proven true or false with evidence. It is objective.\n    *   *Example:* \"The sun is a star.\" (Can be verified by scientific evidence).\n*   An **opinion** is a belief, feeling, or judgment that cannot be proven true or false. It is subjective.\n    *   *Example:* \"Summer is the best season.\" (This is a personal preference).\n\n*   **Why it matters:** Being able to tell the difference helps you evaluate the reliability and credibility of information, especially in argumentative or persuasive texts.\n\n#### 4. Understanding Text Structure: The Blueprint of Meaning\n\nAuthors organize information in specific ways to make their message clear. Recognizing these **text structures** can significantly boost your comprehension.\n\n*   **Common Structures:**\n    *   **Cause and Effect:** Explains why something happened and what the results were. (Keywords: *because, as a result, consequently, therefore*).\n    *   **Compare and Contrast:** Shows similarities and differences between two or more things. (Keywords: *similarly, however, both, on the other hand*).\n    *   **Problem and Solution:** Presents a problem and then offers one or more solutions. (Keywords: *problem, solution, challenge, resolve*).\n    *   **Sequence/Chronological:** Describes events in the order they happened. (Keywords: *first, next, then, finally, dates*).\n    *   **Description:** Provides details about a topic to give a mental picture. (Keywords: *for example, specifically, looks like, characteristics*).\n\n*   **How it helps:** If you know a text is structured as 'problem and solution,' you'll actively look for the problem description and then the proposed solutions, making it easier to follow the author's logic.\n\n---\n\n### Active Reading Techniques: Your Toolkit for Success\n\nBeyond understanding the strategies, applying active reading techniques while you read is crucial.\n\n1.  **Previewing:** Before you read deeply, glance at titles, headings, subheadings, images, and the first/last paragraphs. This activates prior knowledge and sets a purpose for reading.\n2.  **Questioning:** Ask yourself questions *before, during, and after* reading. \"What do I expect to learn?\" \"What is the main point of this paragraph?\" \"How does this connect to what I already know?\"\n3.  **Annotating & Highlighting (Strategically!):** Don't just color the whole page. Highlight key terms, main ideas, or confusing sentences. Write notes in the margin: summarize, ask questions, define words, make connections, or flag an inference.\n4.  **Summarizing & Paraphrasing:** After reading a paragraph or section, try to summarize it in your own words. This forces you to process and consolidate the information.\n\n---\n\n### Putting It All Together: A Quick Practice Example\n\nRead the short passage below and consider the questions:\n\n\"Despite the clear skies and a gentle breeze, the old fishing boat remained tied at the dock. Captain Jones, usually the first to greet the sunrise from the open water, sat silently on the worn bench, polishing a tarnished silver locket. He hadn't been out fishing since Tuesday, when the sudden squall had caught him by surprise, nearly capsizing his vessel. The storm, though brief, had left him shaken, and the sea, once his greatest love, now seemed to hold a silent threat.\"\n\n1.  **Inference:** Why isn't Captain Jones out fishing today, despite good weather?\n    *   *Answer Hint:* He's shaken from a past event and views the sea differently.\n2.  **Author's Purpose:** What is the primary purpose of this paragraph?\n    *   *Answer Hint:* To entertain/describe Captain Jones's current state and internal conflict.\n3.  **Text Structure:** What kind of text structure is primarily used to explain why Captain Jones is not fishing?\n    *   *Answer Hint:* Cause and Effect (the squall *caused* him to be shaken and fearful).\n\n---\n\n### Conclusion\n\nMastering intermediate reading comprehension is a journey of active engagement with text. By practicing inference, identifying author's purpose, distinguishing fact from opinion, and understanding text structure, you'll transform from a passive reader into a powerful interpreter of information. Keep practicing these skills, and watch your understanding soar!",
+                "learning_objectives": [
+                    "Students will be able to make logical inferences based on textual evidence and prior knowledge.",
+                    "Students will be able to identify the author's primary purpose (to persuade, inform, or entertain) in various texts.",
+                    "Students will be able to differentiate between factual statements and opinions within a given text.",
+                    "Students will be able to recognize common text structures (e.g., cause/effect, compare/contrast, problem/solution) and explain how they contribute to meaning.",
+                    "Students will effectively apply active reading strategies such as previewing, questioning, annotating, and summarizing."
+                ],
+                "key_concepts": [
+                    "Inference",
+                    "Author's Purpose (P.I.E.)",
+                    "Fact vs. Opinion",
+                    "Text Structure (Cause & Effect, Compare & Contrast, Problem & Solution)",
+                    "Active Reading Strategies"
+                ],
+                "ai_generated": true
+            }
+        ],
+        "spelling": [
+            {
+                "id": "spelling_lesson_1",
+                "title": "Spelling - Lesson 1",
+                "description": "Core practice for this skill.",
+                "content": "Lesson text."
+            }
+        ],
+        "writing": [
+            {
+                "id": "writing_lesson_1",
+                "title": "Writing - Lesson 1",
+                "description": "Core practice for this skill.",
+                "content": "Lesson text."
+            }
+        ]
+    },
+    "question_stats": {
+        "6": {
+            "attempts": 1,
+            "correct": 1,
+            "incorrect": 0
+        },
+        "8": {
+            "attempts": 1,
+            "correct": 1,
+            "incorrect": 0
+        },
+        "9": {
+            "attempts": 1,
+            "correct": 1,
+            "incorrect": 0
+        },
+        "7": {
+            "attempts": 1,
+            "correct": 1,
+            "incorrect": 0
+        }
+    }
+}
