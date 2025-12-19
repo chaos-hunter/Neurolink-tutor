@@ -118,15 +118,26 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
     }
   };
 
-  const handleLogout = () => {
-    if (window.confirm('Are you sure you want to log out?')) {
-      onLogout();
+  const handleDeleteAccount = async () => {
+    if (!window.confirm('⚠️ WARNING: This will permanently delete your account and all your progress. This action CANNOT be undone. Are you sure?')) {
+      return;
+    }
+
+    if (!window.confirm('FINAL CONFIRMATION: Are you absolutely sure you want to delete your account?')) {
+      return;
+    }
+
+    try {
+      await axios.post(`${API_BASE}/api/user/delete-account`, {
+        student_id: studentId
+      });
+
+      alert('Your account has been deleted successfully.');
+      onLogout(); // Log the user out since their account no longer exists
+    } catch (error) {
+      showFeedback(error.response?.data?.error || 'Error deleting account', true);
     }
   };
-
-  useEffect(() => {
-    loadStudentData();
-  }, []);
 
   return (
     <div className="app-container">
@@ -285,8 +296,14 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
           </small>
         </div>
 
+        <div className="settings-card danger-zone" style={{ border: '1px solid #ff3b30', background: 'rgba(255, 59, 48, 0.05)' }}>
+          <h2 style={{ color: '#ff3b30' }}>Danger Zone</h2>
+          <p>Permanently delete your account and all associated data.</p>
+          <button onClick={handleDeleteAccount} className="btn btn-danger">Delete My Account</button>
+        </div>
+
         <div className="settings-card">
-          <button onClick={handleLogout} className="btn btn-danger">Log Out</button>
+          <button onClick={handleLogout} className="btn btn-secondary" style={{ width: '100%' }}>Log Out</button>
         </div>
 
         {feedback && (
