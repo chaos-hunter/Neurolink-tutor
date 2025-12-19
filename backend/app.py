@@ -1025,7 +1025,7 @@ def reset_password():
     hashed_password = generate_password_hash(new_password)
 
     # Update local structure (which updates DB via shim)
-    student_data[username]['password'] = hashed_password
+    student_data[username]['password_hash'] = hashed_password
     write_json_file(STUDENT_FILE, student_data)
 
     return jsonify({"success": True, "message": "Password reset successfully!"})
