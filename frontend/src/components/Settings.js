@@ -118,10 +118,36 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
     }
   };
 
+  /** 🔥 Danger Zone modal state */
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [finalConfirm, setFinalConfirm] = useState(false);
+
+  /** 🎵 Audio Tracking */
   const audioRef = useRef(null);
+  const fadeInterval = useRef(null);
+
+  const fadeInAudio = () => {
+    if (!audioRef.current) return;
+
+    // Clear any existing fade
+    clearInterval(fadeInterval.current);
+
+    audioRef.current.volume = 0;
+    audioRef.current.play().catch(e => console.log("Audio play blocked or failed:", e));
+
+    fadeInterval.current = setInterval(() => {
+      if (audioRef.current.volume >= 0.45) {
+        audioRef.current.volume = 0.5;
+        clearInterval(fadeInterval.current);
+      } else {
+        audioRef.current.volume += 0.05;
+      }
+    }, 100);
+  };
 
   const stopAudio = () => {
     if (audioRef.current) {
+      clearInterval(fadeInterval.current);
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
@@ -136,30 +162,33 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
   useEffect(() => {
     loadStudentData();
     // Preload audio and initialize ref
-    audioRef.current = new Audio('https://archive.org/download/top-gun-original-motion-picture-soundtrack/01%20Danger%20Zone.mp3');
-    audioRef.current.volume = 0.5;
+    const audio = new Audio('https://archive.org/download/top-gun-original-motion-picture-soundtrack/01%20Danger%20Zone.mp3');
+    audio.loop = true;
+    audio.volume = 0;
+    audioRef.current = audio;
 
     return () => {
       stopAudio();
     };
   }, []);
 
+  const openDeleteModal = () => {
+    setShowDeleteModal(true);
+    setFinalConfirm(false);
+  };
+
+  const handleFirstConfirm = () => {
+    setFinalConfirm(true);
+    fadeInAudio(); // Trigger audio on first interaction!
+  };
+
+  const closeDeleteModal = () => {
+    setShowDeleteModal(false);
+    setFinalConfirm(false);
+    stopAudio();
+  };
+
   const handleDeleteAccount = async () => {
-    // Play "Danger Zone" audio
-    if (audioRef.current) {
-      audioRef.current.play().catch(e => console.log("Audio play blocked or failed:", e));
-    }
-
-    if (!window.confirm('⚠️ WARNING: This will permanently delete your account and all your progress. This action CANNOT be undone. Are you sure?')) {
-      stopAudio();
-      return;
-    }
-
-    if (!window.confirm('FINAL CONFIRMATION: Are you absolutely sure you want to delete your account?')) {
-      stopAudio();
-      return;
-    }
-
     try {
       await axios.post(`${API_BASE}/api/user/delete-account`, {
         student_id: studentId
@@ -167,10 +196,10 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
 
       stopAudio();
       alert('Your account has been deleted successfully.');
-      onLogout(); // Log the user out since their account no longer exists
+      onLogout();
     } catch (error) {
-      stopAudio();
       showFeedback(error.response?.data?.error || 'Error deleting account', true);
+      closeDeleteModal();
     }
   };
 
@@ -334,7 +363,7 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
         <div className="settings-card danger-zone" style={{ border: '1px solid #ff3b30', background: 'rgba(255, 59, 48, 0.05)' }}>
           <h2 style={{ color: '#ff3b30' }}>Danger Zone</h2>
           <p>Permanently delete your account and all associated data.</p>
-          <button onClick={handleDeleteAccount} className="btn btn-danger">Delete My Account</button>
+          <button onClick={openDeleteModal} className="btn btn-danger">Delete My Account</button>
         </div>
 
         <div className="settings-card">
@@ -349,6 +378,47 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
           </div>
         )}
       </div>
+
+      {/* 🔥 DELETE MODAL */}
+      {showDeleteModal && (
+        <div className="modal-overlay">
+          <div className="modal danger-modal">
+            {!finalConfirm ? (
+              <>
+                <h2 style={{ color: '#ff3b30', fontSize: '24px', marginBottom: '15px' }}>⚠️ Are you sure?</h2>
+                <p style={{ marginBottom: '25px', lineHeight: '1.5' }}>
+                  This will permanently delete your account and all progress.
+                  This action <strong>cannot be undone</strong>.
+                </p>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button className="btn btn-secondary" style={{ flex: 1 }} onClick={closeDeleteModal}>
+                    Cancel
+                  </button>
+                  <button className="btn btn-danger" style={{ flex: 1 }} onClick={handleFirstConfirm}>
+                    Yes, Continue
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <h2 style={{ color: '#ff3b30', fontSize: '24px', marginBottom: '15px' }}>🔥 FINAL CONFIRMATION</h2>
+                <p style={{ marginBottom: '25px', lineHeight: '1.5' }}>
+                  You are entering the <strong>Danger Zone</strong>.
+                  Confirming this will erase your identity from Neuralinq Tutor forever.
+                </p>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <button className="btn btn-secondary" style={{ flex: 1 }} onClick={closeDeleteModal}>
+                    Abort Deletion
+                  </button>
+                  <button className="btn btn-danger" style={{ flex: 1, backgroundColor: '#d00' }} onClick={handleDeleteAccount}>
+                    DELETE FOREVER
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
