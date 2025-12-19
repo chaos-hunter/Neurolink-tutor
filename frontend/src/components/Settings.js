@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import API_BASE from '../apiConfig';
@@ -118,6 +118,15 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
     }
   };
 
+  const audioRef = useRef(null);
+
+  const stopAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+
   const handleLogout = () => {
     if (window.confirm('Are you sure you want to log out?')) {
       onLogout();
@@ -126,23 +135,28 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
 
   useEffect(() => {
     loadStudentData();
+    // Preload audio and initialize ref
+    audioRef.current = new Audio('https://archive.org/download/top-gun-original-motion-picture-soundtrack/01%20Danger%20Zone.mp3');
+    audioRef.current.volume = 0.5;
+
+    return () => {
+      stopAudio();
+    };
   }, []);
 
   const handleDeleteAccount = async () => {
     // Play "Danger Zone" audio
-    try {
-      const audio = new Audio('https://archive.org/download/top-gun-original-motion-picture-soundtrack/01%20Danger%20Zone.mp3');
-      audio.volume = 0.5;
-      audio.play().catch(e => console.log("Audio play blocked or failed:", e));
-    } catch (e) {
-      console.error("Error playing audio:", e);
+    if (audioRef.current) {
+      audioRef.current.play().catch(e => console.log("Audio play blocked or failed:", e));
     }
 
     if (!window.confirm('⚠️ WARNING: This will permanently delete your account and all your progress. This action CANNOT be undone. Are you sure?')) {
+      stopAudio();
       return;
     }
 
     if (!window.confirm('FINAL CONFIRMATION: Are you absolutely sure you want to delete your account?')) {
+      stopAudio();
       return;
     }
 
@@ -151,9 +165,11 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
         student_id: studentId
       });
 
+      stopAudio();
       alert('Your account has been deleted successfully.');
       onLogout(); // Log the user out since their account no longer exists
     } catch (error) {
+      stopAudio();
       showFeedback(error.response?.data?.error || 'Error deleting account', true);
     }
   };
