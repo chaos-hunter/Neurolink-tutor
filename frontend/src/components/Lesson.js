@@ -546,14 +546,15 @@ const Lesson = ({ onLogout, userRole, studentId, initialDiagnosticComplete, onDi
                       {isSubmitting ? 'Checking...' : 'Submit'}
                     </button>
 
-                    {wrongAttempts > 0 && hintsUsed < 3 && !isSubmitting && (
+                    {hintsUsed < 3 && !isSubmitting && (
                       <button
                         type="button"
                         className="btn btn-secondary"
                         onClick={getHint}
-                        disabled={isLoading}
+                        disabled={isLoading || wrongAttempts === 0}
+                        title={wrongAttempts === 0 ? "Hints are available after your first try" : ""}
                       >
-                        Get Hint ({hintsUsed}/3)
+                        {wrongAttempts === 0 ? "Hint locked 🔒" : `Get Hint (${hintsUsed}/3)`}
                       </button>
                     )}
                   </div>
