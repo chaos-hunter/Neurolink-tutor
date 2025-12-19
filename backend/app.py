@@ -1008,6 +1008,52 @@ def delete_user_account():
 
     return jsonify({"success": True, "message": f"User '{username}' deleted successfully"})
 
+@app.route('/api/reset-password', methods=['POST'])
+def reset_password():
+    """Reset a user's password (public/forgot password flow)."""
+    username = request.json.get('username')
+    new_password = request.json.get('new_password')
+
+    if not username or not new_password:
+        return jsonify({"error": "Username and new password are required"}), 400
+
+    student_data = read_json_file(STUDENT_FILE)
+    if username not in student_data:
+        return jsonify({"error": "User not found"}), 404
+
+    # Hash the new password
+    hashed_password = generate_password_hash(new_password)
+
+    # Update local structure (which updates DB via shim)
+    student_data[username]['password'] = hashed_password
+    write_json_file(STUDENT_FILE, student_data)
+
+    return jsonify({"success": True, "message": "Password reset successfully!"})
+
+
+@app.route('/api/user/delete-account', methods=['POST'])
+def delete_own_account():
+    """Allow a user to delete their own account."""
+    student_id = request.json.get('student_id')
+
+    if not student_id:
+        return jsonify({"error": "Student ID is required"}), 400
+
+    # Use existing deletion logic
+    db_success = db_delete_student(student_id)
+
+    student_data = read_json_file(STUDENT_FILE)
+    json_exists = student_id in student_data
+
+    if json_exists:
+        del student_data[student_id]
+        write_json_file(STUDENT_FILE, student_data)
+
+    if not db_success and not json_exists:
+        return jsonify({"error": "Account not found"}), 404
+
+    return jsonify({"success": True, "message": "Your account has been deleted."})
+
 
 @app.route('/api/admin/create-badge', methods=['POST'])
 def create_custom_badge():
