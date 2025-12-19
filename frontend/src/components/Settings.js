@@ -129,6 +129,15 @@ const Settings = ({ onLogout, darkMode, toggleDarkMode, userRole, studentId }) =
   }, []);
 
   const handleDeleteAccount = async () => {
+    // Play "Danger Zone" audio
+    try {
+      const audio = new Audio('https://archive.org/download/top-gun-original-motion-picture-soundtrack/01%20Danger%20Zone.mp3');
+      audio.volume = 0.5;
+      audio.play().catch(e => console.log("Audio play blocked or failed:", e));
+    } catch (e) {
+      console.error("Error playing audio:", e);
+    }
+
     if (!window.confirm('⚠️ WARNING: This will permanently delete your account and all your progress. This action CANNOT be undone. Are you sure?')) {
       return;
     }
